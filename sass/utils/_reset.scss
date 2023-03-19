@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+input {
+  outline: none;
+}

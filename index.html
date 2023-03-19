@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <title>Decbase</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Logo -->
+      <div class="header__container container">
+        <a class="header__logo" href="#">
+          <img
+            class="header__image"
+            src="images/logo.png"
+            width="80"
+            alt="Logo"
+          />
+        </a>
+        <div class="header__wraperDiv">
+          <!-- Navigation -->
+          <nav class="header__navigation">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">Home</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Project</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Services</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">About</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Blog</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Shop</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__authorizationDiv">
+            <a class="header__authorizationLink" href="#">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section  -->
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__text">
+          <p class="hero__preview">MODERN INTERIOR</p>
+          <h1 class="hero__title">Create Your Interior Design.</h1>
+          <p class="hero__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.
+          </p>
+          <button class="hero__btn" type="button">Contact</button>
+        </div>
+        <div class="hero__divDecor">
+          <img
+            class="hero__image"
+            src="images/modern_design.png"
+            alt="modern design"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Features Section  -->
+    <section class="features">
+      <div class="features__container container">
+        <p class="features__text">WHAT WE DO</p>
+        <h2 class="features__title">Our Service</h2>
+        <div class="features__btnWrapper">
+          <button class="features__button" id="all" >All</button>
+          <button class="features__button" id="design" data-id="1">Interior Design</button>
+          <button class="features__button" id="architecture" data-id="2">
+            Architecture
+          </button>
+          <button class="features__button" id="planning" data-id="3">Plannig</button>
+        </div>
+        <div class="features__divWrapper">
+          <div class="features__div">
+            <svg class="features__svg" width="45" height="35">
+              <use href="svg/symbol-defs.svg#icon-images"></use>
+            </svg>
+            <div class="features__textDiv">
+              <h3 class="features__subtitle">Interior Design1</h3>
+              <p class="features__subtext">
+                adipiscing elit sed eiusmod.Lorem ipsum dolor amet consectetur.
+                Lorem ipsum dolor amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="features__div clicked">
+            <svg class="features__svg" width="45" height="35">
+              <use href="svg/symbol-defs.svg#icon-images"></use>
+            </svg>
+            <div class="features__textDiv">
+              <h3 class="features__subtitle">Interior Design1</h3>
+              <p class="features__subtext">
+                adipiscing elit sed eiusmod.Lorem ipsum dolor amet consectetur.
+                Lorem ipsum dolor amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="features__div">
+            <svg class="features__svg" width="45" height="35">
+              <use href="svg/symbol-defs.svg#icon-images"></use>
+            </svg>
+            <div class="features__textDiv">
+              <h3 class="features__subtitle">Interior Design1</h3>
+              <p class="features__subtext">
+                adipiscing elit sed eiusmod.Lorem ipsum dolor amet consectetur.
+                Lorem ipsum dolor amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="features__div">
+            <svg class="features__svg" width="45" height="35">
+              <use href="svg/symbol-defs.svg#icon-images"></use>
+            </svg>
+            <div class="features__textDiv">
+              <h3 class="features__subtitle">Interior Design1</h3>
+              <p class="features__subtext">
+                adipiscing elit sed eiusmod.Lorem ipsum dolor amet consectetur.
+                Lorem ipsum dolor amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="features__div">
+            <svg class="features__svg" width="45" height="35">
+              <use href="svg/symbol-defs.svg#icon-images"></use>
+            </svg>
+            <div class="features__textDiv">
+              <h3 class="features__subtitle">Interior Design1</h3>
+              <p class="features__subtext">
+                adipiscing elit sed eiusmod.Lorem ipsum dolor amet consectetur.
+                Lorem ipsum dolor amet consectetur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section  -->
+    <section class="about">
+      <div class="about__container container">
+        <div class="about__imageWrapper">
+          <img class="about__image" src="images/mask-group.png" alt="design" />
+        </div>
+
+        <div class="about__textWrapper">
+          <p class="about__subtitle">ABOUT US</p>
+          <h2 class="about__title">Interioris The Will of An Epoch Mextreo</h2>
+          <p class="about__text">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form injected humour,
+            or randomised words which don't look even slightly believable.If you
+            are going to use a passage of Lorem Ipsum, sure there isn't anything
+            embarrassing hidden the middleof text. All the Lorem Ipsum
+            generators on the Internettend to repeat predefined chunks as
+            necessary,making this the first true generator on the Internet.
+          </p>
+          <button class="about__btn" type="button">Learn more</button>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section  -->
+    <section class="experience">
+      <div class="experience__container container">
+        <div class="experience__text">
+          <img src="images/20image.png" alt="20" />
+          <p class="experience__description">
+            Years of Successful Working The&nbspMarket
+          </p>
+          <button class="experience__btn" type="button">Read more</button>
+        </div>
+        <div class="experience__imageWrapper">
+          <img
+            class="experience__image"
+            src="images/shelves.png"
+            alt="shelves design"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- counter Section  -->
+    <section class="counter">
+      <div class="counter__container container">
+        <h2 class="counter__title">
+          3000+ Completed Work <br />Which WE have Successfully Done
+        </h2>
+        <div class="counter__items">
+          <div class="counter__wrapper">
+            <div class="counter__unit">
+              <span class="counter__span">980</span>
+              <p class="counter__text">Project</p>
+            </div>
+            <div class="counter__lineDecor">
+              <div class="counter__smallLine"></div>
+            </div>
+          </div>
+          <div class="counter__wrapper">
+            <div class="counter__unit">
+              <span class="counter__span">520</span>
+              <p class="counter__text">Happy Client</p>
+            </div>
+            <div class="counter__lineDecor counter__lineDecor--rightOriented">
+              <div
+                class="counter__smallLine counter__smallLine--rightOriented"
+              ></div>
+            </div>
+          </div>
+          <div class="counter__wrapper">
+            <div class="counter__unit">
+              <span class="counter__span">330</span>
+              <p class="counter__text">Winner</p>
+            </div>
+            <div class="counter__lineDecor">
+              <div class="counter__smallLine"></div>
+            </div>
+          </div>
+          <div class="counter__wrapper">
+            <div class="counter__unit">
+              <span class="counter__span">120</span>
+              <p class="counter__text">Recoment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- swiper Section  -->
+    <section class="slider container">
+      <p class="slider__text">TESTIMONIALS</p>
+      <h2 class="slider__title">Client says about us</h2>
+      <div class="slider__wrapper">
+        <div class="slider__btnWrapper">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper mySwiper container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/boy.png" alt="man" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur. Lorem ipsum
+                    dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/girl.png" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Rekha Varadwaz
+                    <span class="slider__span">/Manager at Nike inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/girl.png" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Rekha Varadwaz
+                    <span class="slider__span">/Manager at Nike inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/boy.png" alt="man" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur. Lorem ipsum
+                    dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/boy.png" alt="man" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur. Lorem ipsum
+                    dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/girl.png" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor ame t
+                    consectetur. Lorem ipsum dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/girl.png" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor ame t
+                    consectetur. Lorem ipsum dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__div">
+                <img
+                  class="slider__quotation"
+                  src="images/”.png"
+                  alt="quotation mark"
+                />
+                <img class="slider__img" src="images/boy.png" alt="man" />
+                <div class="slider__textDiv">
+                  <p class="slider__subtitle">
+                    Louis Saville
+                    <span class="slider__span">/CEO at Google inc</span>
+                  </p>
+                  <p class="slider__subtext">
+                    adipiscing elit sed eiusmod.Lorem ipsum dolor amet
+                    consectetur. Lorem ipsum dolor amet consectetur. Lorem ipsum
+                    dolor amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section  -->
+
+    <section class="form">
+      <div class="form__container container">
+        <h2 class="form__title">DON’T FORGET TO SIGN UP</h2>
+        <p class="form__text">
+          Find out early about all upcoming promotions and new product releases
+          with our newsletter.
+        </p>
+        <form class="form__feedbackForm">
+          <label class="form__label">
+            <input
+              class="form__nameInput"
+              type="text"
+              name="name"
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              class="form__surnameInput"
+              type="text"
+              name="surname"
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              placeholder="Enter your surname"
+              required
+            />
+          </label>
+
+          <input
+            class="form__emailInput"
+            type="email"
+            name="name"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            placeholder="Enter your e-mail"
+            required
+          />
+          <button type="submit" class="form__button">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+
+    <footer class="footer">
+      <div class="container small-container">
+        <div class="footer__container equal-columns">
+          <div class="footer__linkWrapper">
+             <a class="header__logo" href="#">
+          <img
+            class="header__image"
+            src="images/logo.png"
+            width="80"
+            alt="Logo"
+          />
+        </a>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Why Alivio</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Solutions</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Community</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div> 
+
+    <!-- Footer Socials  -->
+
+    <ul class="svg__list">
+            <li class="svg__item">
+              <a class="svg__link" href="">
+                <svg class="svg__icon" width="83" height="77">
+                  <use href="svg/symbol-defs.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="svg__item">
+              <a class="svg__link  svg__link_instagram" href=""></a>
+
+               <svg class="svg__icon" width="83" height="77">
+                  <use href="/svg/symbol-defs.svg#icon-instagram"></use>
+                </svg> 
+              </a>
+            </li>
+            <li class="svg__item">
+              <a class="svg__link" href="">
+                <svg class="svg__icon" width="83" height="77">
+                  <use href="svg/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+         <div class="footer__btnWrapper">
+            <div class="wrapper">
+              <h3 class="btn__title">Discover our solutions</h3>
+              <ul class="btn__List">
+                <li class="btn__item">
+                  <a class="btn__link" href="">
+                    <img
+                      src="images/google-play.png"
+                      width="216"
+                      height="65.24"
+                      alt="google-play"
+                    />
+                  </a>
+                </li>
+                <li class="btn__item">
+                  <a class="btn__link" href="">
+                    <img
+                      src="images/play-store.png"
+                      width="202"
+                      height="65.24"
+                      alt="play-store"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/swiper.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/localstorage.js" type="module"></script>
+  </body>
+</html>

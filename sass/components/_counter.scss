@@ -1,0 +1,175 @@
+.counter {
+  background-color: $greyBgnd;
+
+  &__container {
+    padding: 90px 10px;
+    @include mq(tablet) {
+      padding: 90px 0;
+    }
+    @include mq(desktop) {
+      padding: 90px 50px;
+    }
+  }
+  &__title {
+    @include mq(tablet) {
+      width: 700px;
+      margin-bottom: 90px;
+      text-align: center;
+      font-family: $accentFont;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 1.25;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(desktop) {
+      width: 820px;
+      margin-bottom: 90px;
+    }
+  }
+  &__items {
+    @include mq(tablet) {
+      width: 768px;
+      height: 278px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    @include mq(desktop) {
+      width: 1345px;
+      height: 278px;
+      display: flex;
+    }
+  }
+
+  &__wrapper {
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+
+      &:nth-child(even) {
+        display: flex;
+        margin-top: 100px;
+      }
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+    @include mq(desktop) {
+      display: flex;
+      &:nth-child(even) {
+        margin-top: 100px;
+      }
+      &:not(:last-child) {
+        margin-right: 195px;
+      }
+    }
+  }
+  &__unit {
+    @include mq(tablet) {
+      position: relative;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 142px;
+      height: 138px;
+      border: 1px solid $lineGreyColor;
+      background-color: $whiteColor;
+      border-radius: 24px 0;
+      box-shadow: 2px 11px 15px 2px rgb(0 0 0 / 25%);
+    }
+    @include mq(desktop) {
+      width: 186px;
+      height: 182px;
+    }
+  }
+
+  &__span {
+    font-family: $primaryFont;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.25;
+    width: 86px;
+    margin-bottom: 10px;
+    color: $accentBlackColor;
+  }
+  &__text {
+    font-family: $primaryFont;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25;
+    width: 86px;
+    margin-bottom: 10px;
+    color: $primaryGreyColor;
+  }
+  &__lineDecor {
+    @include mq(tablet) {
+      position: absolute;
+      z-index: 10;
+      width: 118px;
+      height: 50px;
+      border: 1px solid $lineGreyColor;
+      transform: translate(146px, 70px);
+      border-left: none;
+      border-right: 1px solid $lineGreyColor;
+      border-bottom: none;
+      border-top: 1px solid $lineGreyColor;
+    }
+    @include mq(desktop) {
+      transform: translate(160px, 82px);
+    }
+
+    position: absolute;
+    z-index: 10;
+    width: 118px;
+    height: 50px;
+    border: 1px solid $lineGreyColor;
+    transform: translate(160px, 82px);
+    border-left: none;
+    border-right: 1px solid $lineGreyColor;
+    border-bottom: none;
+    border-top: 1px solid $lineGreyColor;
+  }
+  &__smallLine {
+    @include mq(tablet) {
+      position: absolute;
+      width: 118px;
+      height: 106px;
+      transform: translate(99%, -2%);
+      border-left: 1px solid $lineGreyColor;
+      border-right: none;
+      border-bottom: none;
+      border-top: none;
+    }
+    @include mq(desktop) {
+      width: 118px;
+      height: 106px;
+      border: 1px solid $lineGreyColor;
+      transform: translate(99%, -2%);
+      border-bottom: 1px solid $lineGreyColor;
+      border-right: none;
+      border-top: none;
+    }
+  }
+  &__lineDecor.counter__lineDecor--rightOriented {
+    border-left: none;
+    border-right: none;
+  }
+  &__smallLine.counter__smallLine--rightOriented {
+    @include mq(tablet) {
+      transform: translate(98%, -100%);
+      border-left: 1px solid #e0e0e0;
+      border-top: none;
+      border-bottom: none;
+    }
+    @include mq(desktop) {
+      border-top: 1px solid #e0e0e0;
+    }
+  }
+}

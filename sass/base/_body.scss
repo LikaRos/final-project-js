@@ -1,0 +1,27 @@
+body {
+  font-family: $primaryFont, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.container {
+  padding: 0 50px;
+  margin-left: auto;
+  margin-right: auto;
+   
+    @include mq(mobile) {
+      width: 480px;
+    }
+
+    @include mq(tablet) {
+      width: 768px;
+    }
+
+    @include mq(desktop) {
+      width: 1500px;
+    }
+}
+
+

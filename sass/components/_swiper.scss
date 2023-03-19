@@ -1,0 +1,27 @@
+.swiper {
+  &-wrapper {
+    display: flex;
+    flex-direction: crow;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &-slide {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-button-next,
+  &-rtl &-button-prev {
+    position: absolute;
+  }
+  &-button-prev,
+  &-rtl &-button-next {
+    position: absolute;
+  }
+  &-button-prev {
+    top: 0 !important;
+    left: 100% !important;
+  }
+}
