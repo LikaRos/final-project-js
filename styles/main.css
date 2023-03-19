@@ -714,16 +714,16 @@ body {
     font-size: 18px;
   }
 }
-.features__div.clicked {
+.features__div:hover {
   background-color: #CAA892;
 }
-.features__div.clicked .features__subtitle {
+.features__div:hover .features__subtitle {
   color: #ffffff;
 }
-.features__div.clicked .features__subtext {
+.features__div:hover .features__subtext {
   color: #ffffff;
 }
-.features__div.clicked .features__svg {
+.features__div:hover .features__svg {
   fill: #ffffff;
 }
 

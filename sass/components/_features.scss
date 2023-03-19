@@ -157,19 +157,20 @@
       font-size: 18px;
     }
   }
-  &__div.clicked {
+
+  &__div:hover {
     background-color: $btnHoverColor;
   }
-  &__div.clicked &__subtitle {
+  &__div:hover &__subtitle {
     color: $whiteColor;
   }
-  &__div.clicked &__subtext {
+  &__div:hover &__subtext {
     color: $whiteColor;
   }
-  &__div.clicked &__svg {
+  &__div:hover &__svg {
     fill: $whiteColor;
   }
 }
-.hidden{
-   display: none;
+.hidden {
+  display: none;
 }

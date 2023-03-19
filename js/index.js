@@ -3,6 +3,7 @@ const fetchDesignBtn = document.querySelector("#design");
 const fetchArchitectureBtn = document.querySelector("#architecture");
 const fetchPlanningBtn = document.querySelector("#planning");
 const postsList = document.querySelector(".features__divWrapper");
+const use = document.querySelector(".features__use")
 
 fetchPosts()
   .then((posts) => {
@@ -55,7 +56,7 @@ function markUpHtml(posts) {
   return posts.map((post) => {
     return `<div class="features__div hidden" data-id="${post.userId}">
      <svg class="features__svg" width="45" height="35">
-       <use href="svg/symbol-defs.svg#icon-images"></use>
+       <use class="features__use" href="${selectIcon(post.userId)}"></use>
      </svg>
      <div class="features__textDiv">
        <h3 class="features__subtitle">${post.title}</h3>
@@ -74,3 +75,16 @@ function showLastPost() {
       }
    } 
 }
+function  selectIcon(id) {
+   switch (id) {
+   case 1:
+     return "svg/symbol-defs.svg#icon-images";
+    
+   case 2:
+    return "svg/symbol-defs.svg#icon-office";
+     
+   case 3:
+   default:
+      return "svg/symbol-defs.svg#icon-phone";
+   }
+} 
