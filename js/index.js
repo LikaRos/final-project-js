@@ -20,10 +20,12 @@ fetchArchitectureBtn.addEventListener("click", handleFilter);
 fetchPlanningBtn.addEventListener("click", handleFilter);
 
 function handleAll() {
-  const posts = document.querySelectorAll(".features__div.hidden");
+  const posts = document.querySelectorAll(".features__div:not(.hidden)");
   for (let i = 0; i < posts.length; i++) {
-    posts[i].classList.remove("hidden");
+    posts[i].classList.add("hidden");
   }
+
+  showLastPost();
 }
 
 function handleFilter(event) {
@@ -65,7 +67,7 @@ function markUpHtml(posts) {
 
 function showLastPost() {
    for (let i=1; i<=3; i++) {
-      let element = postsList.querySelector('div[data-id="' + i + '"]:last-of-type');
+      let element = postsList.querySelector('div[data-id="' + i + '"]');
 
       if (element) {
          element.classList.remove("hidden");
