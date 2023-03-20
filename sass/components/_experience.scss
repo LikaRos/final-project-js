@@ -1,10 +1,11 @@
 .experience {
   &__container {
-   padding: 100px 10px;
-   display: flex;
-   flex-direction: column;
+    padding: 100px 10px;
+    display: flex;
+    flex-direction: column;
     @include mq(tablet) {
-      
+      padding: 100px 30px 100px 40px;
+
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -18,14 +19,17 @@
     }
   }
   &__text {
-   margin-bottom: 50px;
-   text-align: center;
+    margin-bottom: 50px;
+    text-align: center;
     @include mq(tablet) {
       width: 420px;
+      text-align: left;
     }
+
     @include mq(desktop) {
       width: 450px;
       padding-left: 40px;
+      text-align: left;
     }
   }
   &__description {
@@ -56,8 +60,8 @@
 
     @include mq(tablet) {
       border-radius: 90px 0;
-      width: 355px;
-      height: 600px;
+      width: 500px;
+      height: 730px;
     }
     @include mq(desktop) {
       border-radius: 153px 0;
@@ -75,9 +79,10 @@
 
     @include mq(tablet) {
       border-radius: 90px 0;
-      width: 355px;
-      height: 600px;
-      transform: translate(-41px, -21px);
+      width: 500px;
+      height: 730px;
+      top: 0;
+      right: 0;
     }
     @include mq(desktop) {
       display: block;
@@ -97,6 +102,10 @@
     font-weight: 700;
     text-transform: uppercase;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 18px;
+    &:hover,
+    &:active {
+      background-color: $btnHoverColor;
+      box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
+    }
   }
 }

@@ -1,0 +1,97 @@
+.equal-columns > * {
+  @include mq(tablet) {
+    flex: 1;
+  }
+}
+.footer {
+   position: relative;
+  background-color: $greyBgnd;
+  &::after {
+   content: "";
+   position: absolute;
+   display: block;
+   bottom: 54px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   border-radius: 1px;
+   background-color: $greyColor;
+  }
+  &__container {
+    padding-top: 94px;
+    @include mq(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-bottom: 68px;
+      }
+    }
+    @include mq(desktop) {
+    }
+  
+  &__logo {
+    display: block;
+    margin-bottom: 12px;
+  }
+  &__image {
+    @include mq(tablet) {
+      width: 151px;
+      height: 50px;
+    }
+    @include mq(desktop) {
+    }
+  }
+
+  &__quickLinks,
+  &__company,
+  &__contact,
+  &__socials {
+    padding-top: 7px;
+    min-width: 175px;
+    color: $accentBlackColor;
+  }
+
+  &__quickLinks h3,
+  &__company h3,
+  &__contact h3,
+  &__socials h3 {
+    font-size: 24px;
+    font-family: $accentFont;
+  }
+
+  &__list--grey a,
+  &__text {
+    color: $primaryGreyColor;
+  }
+  &__copyrightText{
+   color: $primaryGreyColor;
+   text-align: center;
+   margin-bottom: 19px;
+  }
+}
+
+.svg__icon {
+  fill: $whiteColor;
+}
+
+.svg__list {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.svg__item {
+}
+.svg__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: $greyIconColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $btnBgndColor;
+  }
+}

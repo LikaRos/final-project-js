@@ -4,7 +4,8 @@
 
     @include mq(tablet) {
       display: flex;
-      padding: 30px 10px;
+      align-items: center;
+      padding: 30px 140px 30px 70px;
     }
 
     @include mq(desktop) {
@@ -19,9 +20,8 @@
     text-align: center;
 
     @include mq(tablet) {
-      margin-left: 10px;
-      margin-right: 15px;
-      width: 315px;
+      margin-right: 60px;
+      width: 420px;
       text-align: left;
     }
 
@@ -74,6 +74,10 @@
       background-color: $btnHoverColor;
       box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
     }
+    @include mq(tablet) {
+      font-size: 18px;
+      font-weight: 700;
+    }
     @include mq(desktop) {
       font-size: 18px;
     }
@@ -88,8 +92,9 @@
 
     @include mq(tablet) {
       border-radius: 90px 0;
-      width: 400px;
-      height: 345px;
+      margin-left: 143px;
+      width: 405px;
+      height: 635px;
     }
     @include mq(desktop) {
       border-radius: 153px 0;
@@ -107,8 +112,10 @@
 
     @include mq(tablet) {
       border-radius: 90px 0;
-      width: 400px;
-      transform: translate(-25px, -15px);
+       width: 405px;
+      height: 635px;
+      top: 0;
+      right: 0;
     }
     @include mq(desktop) {
       display: block;

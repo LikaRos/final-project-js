@@ -1,7 +1,11 @@
 .slider {
-  padding-bottom: 245px;
+  &__container {
+    padding: 63px 70px 245px 70px;
+   
+  }
+
   &__wrapper {
-   position: relative;
+    position: relative;
   }
   &__text {
     font-family: $accentFont;
@@ -29,6 +33,7 @@
     line-height: 1.18;
     font-weight: 500;
     text-align: center;
+
     @include mq(tablet) {
       font-size: 40px;
       margin-bottom: 30px;
@@ -42,6 +47,17 @@
       margin-bottom: 100px;
     }
   }
+  &__btnWrapper {
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-bottom: 85px;
+    margin-right: 50px;
+  }
 
   &__div {
     position: relative;
@@ -53,9 +69,11 @@
     margin-bottom: 30px;
     border-radius: 60px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.25);
     @include mq(tablet) {
-      width: 90%;
+      width: 50%;
+      margin-top: 30px;
+      margin-bottom: 70px;
     }
     @include mq(desktop) {
       width: 35%;
@@ -103,6 +121,7 @@
     }
   }
   &__img {
+    border-radius: 35px 0;
     position: absolute;
     width: 130px;
     height: 130px;

@@ -12,11 +12,11 @@ body {
   margin-right: auto;
    
     @include mq(mobile) {
-      width: 480px;
+      width: 576px;
     }
 
     @include mq(tablet) {
-      width: 768px;
+      width: 992px;
     }
 
     @include mq(desktop) {

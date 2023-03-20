@@ -41,22 +41,22 @@
                 <a class="header__link" href="#">Home</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">Project</a>
+                <a class="header__link" href="#project">Project</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">Services</a>
+                <a class="header__link" href="#services">Services</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">About</a>
+                <a class="header__link" href="#about">About</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">Blog</a>
+                <a class="header__link" href="#blog">Blog</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">Shop</a>
+                <a class="header__link" href="#shop">Shop</a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#">Contact</a>
+                <a class="header__link" href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -65,9 +65,12 @@
           </div>
         </div>
       </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
     </header>
     <!-- Hero Section  -->
-    <section class="hero">
+    <section id="project" class="hero">
       <div class="hero__container container">
         <div class="hero__text">
           <p class="hero__preview">MODERN INTERIOR</p>
@@ -89,7 +92,7 @@
       </div>
     </section>
     <!-- Features Section  -->
-    <section class="features">
+    <section  id="services" class="features">
       <div class="features__container container">
         <p class="features__text">WHAT WE DO</p>
         <h2 class="features__title">Our Service</h2>
@@ -166,7 +169,7 @@
       </div>
     </section>
     <!-- About Section  -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__container container">
         <div class="about__imageWrapper">
           <img class="about__image" src="images/mask-group.png" alt="design" />
@@ -253,13 +256,19 @@
       </div>
     </section>
     <!-- swiper Section  -->
-    <section class="slider container">
+    <section id="shop" class="slider">
+      <div class="slider__container">
       <p class="slider__text">TESTIMONIALS</p>
       <h2 class="slider__title">Client says about us</h2>
       <div class="slider__wrapper">
         <div class="slider__btnWrapper">
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+  
+          <div class="swiper__btn-next">
+            <span class="swiper__span"><</span>
+          </div>
+          <div class="swiper__btn-prev">
+            <span class="swiper__span">></span>
+          </div>
         </div>
         <div class="swiper mySwiper container">
           <div class="swiper-wrapper">
@@ -423,11 +432,75 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+    </div>
     </section>
 
     <!-- Blog Section  -->
-
-    <section class="form">
+    <section id="blog" class="blog">
+      <div class="blog__container container">
+        <p class="blog__text">LETEST NEWS</p>
+        <h2 class="blog__title" style="text-align:center">From Our Blog</h2>
+        
+        <div class="row">
+          <div class="blog__column">
+            <div class="blog__divDecor">
+                <img class="blog__image" src="images/design-trends.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <h3 class="blog__descriptionTitle">2020 Interior Design Trends</h3>
+            <p class="blog__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              incididunt ut labore et dolore magna aliqua.</p>
+              <button class="blog__button" type="button">CONTINUE READING....</button>
+          </div>
+          <div class="blog__column">
+            <div class="blog__divDecor">
+              <img  class="blog__image" src="images/28-interior-designs.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <h3 class="blog__descriptionTitle">28 Notable Product at ARC Interior Design</h3>
+            <p class="blog__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              incididunt ut labore et dolore magna aliqua.</p>
+              <button class="blog__button" type="button">CONTINUE READING....</button>
+          </div>
+        </div>
+        
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext">1 / 2</div>
+              <img src="images/design-trends.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">2 / 2</div>
+              <img src="images/28-interior-designs.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <h3 id="captionTitle"></h3>
+              <p id="captionText"></p>
+            </div>
+        
+        
+            <div class="column">
+              <img class="demo cursor" src="images/design-trends.png" style="width:100%" onclick="currentSlide(1)" alt="trends">
+              <h3 class="captionTitle">2020 Interior Design Trends</h3>
+              <p class="captionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/28-interior-designs.png" style="width:100%" onclick="currentSlide(2)" alt="designs">
+              <h3 class="captionTitle">28 Notable Product at ARC Interior Design</h3>
+              <p class="captionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+           </div>
+        </div>
+      </div>
+    </section>
+    
+<!-- Form Section  -->
+    <section id="contact" class="form">
       <div class="form__container container">
         <h2 class="form__title">DON’T FORGET TO SIGN UP</h2>
         <p class="form__text">
@@ -470,94 +543,119 @@
     <!-- Footer Section  -->
 
     <footer class="footer">
-      <div class="container small-container">
+      <div class="container">
         <div class="footer__container equal-columns">
-          <div class="footer__linkWrapper">
-             <a class="header__logo" href="#">
-          <img
-            class="header__image"
-            src="images/logo.png"
-            width="80"
-            alt="Logo"
-          />
-        </a>
-
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">Why Alivio</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Solutions</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Community</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Pricing</a>
-              </li>
-            </ul>
-          </div> 
-
-    <!-- Footer Socials  -->
-
-    <ul class="svg__list">
-            <li class="svg__item">
-              <a class="svg__link" href="">
-                <svg class="svg__icon" width="83" height="77">
-                  <use href="svg/symbol-defs.svg#icon-fb"></use>
-                </svg>
+            <div class="footer__logoWrapper">
+              <a class="footer__logo" href="#">
+                <img
+                class="footer__image"
+                src="images/logo.png"
+                width="80"
+                alt="Logo"/>
               </a>
-            </li>
-            <li class="svg__item">
-              <a class="svg__link  svg__link_instagram" href=""></a>
-
-               <svg class="svg__icon" width="83" height="77">
-                  <use href="/svg/symbol-defs.svg#icon-instagram"></use>
-                </svg> 
-              </a>
-            </li>
-            <li class="svg__item">
-              <a class="svg__link" href="">
-                <svg class="svg__icon" width="83" height="77">
-                  <use href="svg/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-
-         <div class="footer__btnWrapper">
-            <div class="wrapper">
-              <h3 class="btn__title">Discover our solutions</h3>
-              <ul class="btn__List">
-                <li class="btn__item">
-                  <a class="btn__link" href="">
-                    <img
-                      src="images/google-play.png"
-                      width="216"
-                      height="65.24"
-                      alt="google-play"
-                    />
-                  </a>
+              <p class="footer__text">But i must explain to you all this mistaken idea of dencouncing pleasure.</p>
+            </div>
+            <div class="footer__quickLinks"> 
+              <h3>Quick Links</h3> 
+              <ul class="footer__list footer__list--grey">
+                <li class="footer__item">
+                    <a class="footer__link" href="#">About Our Company</a>
                 </li>
-                <li class="btn__item">
-                  <a class="btn__link" href="">
-                    <img
-                      src="images/play-store.png"
-                      width="202"
-                      height="65.24"
-                      alt="play-store"
-                    />
-                  </a>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Services WE provide</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Career & Opportunity</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Privacy & policy</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Contact US</a>
                 </li>
               </ul>
             </div>
-          </div>
+            <div class="footer__company">
+              <h3>Company</h3>  
+              <ul class="footer__list footer__list--grey">
+                 <li class="footer__item">
+                   <a class="footer__link" href="#">About Company</a>
+                 </li>
+                 <li class="footer__item">
+                   <a class="footer__link" href="#">Our Testimonials</a>
+                 </li>
+                 <li class="footer__item">
+                   <a class="footer__link" href="#">Latest News</a>
+                 </li>
+                 <li class="footer__item">
+                   <a class="footer__link" href="#">Our misson</a>
+                 </li>
+                 <li class="footer__item">
+                   <a class="footer__link" href="#">Get a free Quot</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__contact">
+              <h3>Contact us</h3>
+              <ul class="footer__list footer__list--grey">
+                <li class="footer__item">
+                   <a class="footer__link" href="https://www.google.com.ua/maps/place/%D0%A5%D1%80%D0%B0%D0%BC+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE+%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B0/@41.4036339,2.1721671,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a2dcd83dfb93:0x9bd8aac21bc3c950!8m2!3d41.4036299!4d2.1743558!16zL20vMGc2bjM?hl=ru">Sagrada Familia, Herba
+                    Street Front USA</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Our Testimonials</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="mailto:info@example.com">brandoxide@gmail.com</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="002-568423591">002-568423591</a>
+                </li>
+              </ul>
+            </div>
+        
+    <!-- Footer Socials  -->
+            <div class="footer__socials">  
+              <h3>Follow Us</h3>
+              <ul class="svg__list">
+                <li class="svg__item">
+                    <a class="svg__link" href="#">
+                      <svg class="svg__icon" width="21" height="20">
+                        <use class="svg__socials" href="svg/symbol-defs.svg#icon-Facebook-Icon"></use>
+                      </svg>
+                    </a>
+                </li>
+                <li class="svg__item">
+                    <a class="svg__link  svg__link_instagram" href="#">
+                    <svg class="svg__icon" width="20" height="20">
+                        <use class="svg__socials" href="/svg/symbol-defs.svg#icon-twitter"></use>
+                      </svg> 
+                    </a>
+                </li>
+                <li class="svg__item">
+                    <a class="svg__link" href="#">
+                      <svg class="svg__icon" width="19" height="19">
+                        <use class="svg__socials" href="svg/symbol-defs.svg#icon-instagram-1"></use>
+                      </svg>
+                    </a>
+                </li>
+                <li class="svg__item">
+                    <a class="svg__link" href="#">
+                      <svg class="svg__icon" width="21" height="20">
+                        <use class="svg__socials" href="svg/symbol-defs.svg#icon-linkedin2"></use>
+                      </svg>
+                    </a>
+                </li>
+              </ul></div>
         </div>
+        <p class="footer__copyrightText">Copyright @ 2020 Brandoxide.all right reserved.</p>
       </div>
     </footer>
 
-    <script src="js/swiper.js"></script>
+    <script src="js/progressbar.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/localstorage.js" type="module"></script>
   </body>
 </html>

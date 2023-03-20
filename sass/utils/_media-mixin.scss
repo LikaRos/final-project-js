@@ -1,6 +1,6 @@
 @mixin mq($screen) {
-  $mobile: 480px;
-  $tablet: 768px;
+  $mobile: 576px;
+  $tablet: 992px;
   $desktop: 1920px;
 
   @if $screen == mobile-only {
