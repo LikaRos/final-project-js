@@ -322,7 +322,7 @@ body {
   .header__container {
     display: flex;
     align-items: center;
-    padding: 100px 120px 90px 50px;
+    padding: 10px 120px 10px 50px;
   }
 }
 .header__image {
@@ -1648,6 +1648,36 @@ body {
   box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1920px) {
+  .blog__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .blog__column {
+    margin-right: auto;
+    margin-left: auto;
+    width: 610px;
+    padding: 18px 20px 40px 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .blog__column {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
 .row > .column {
   padding: 0 8px;
 }
@@ -1658,21 +1688,17 @@ body {
   clear: both;
 }
 
-.blog__column {
-  margin-right: auto;
-  margin-left: auto;
-  width: 610px;
-  padding: 18px 20px 40px 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.column {
+  float: left;
+  width: 25%;
+  margin-right: 30px;
 }
 
 /* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -1692,7 +1718,6 @@ body {
   max-width: 1200px;
 }
 
-/* The Close Button */
 .close {
   color: #C4C4C4;
   position: absolute;
@@ -1700,6 +1725,18 @@ body {
   right: 25px;
   font-size: 100px;
   font-weight: bold;
+}
+@media screen and (min-width: 992px) {
+  .close {
+    top: 68px;
+    right: 100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .close {
+    top: 104px;
+    right: 84px;
+  }
 }
 
 .close:hover,
@@ -1711,6 +1748,12 @@ body {
 
 .mySlides {
   display: none;
+}
+@media screen and (min-width: 992px) {
+  .mySlides {
+    margin-top: 100px;
+    width: 93%;
+  }
 }
 
 .cursor {
@@ -1739,6 +1782,11 @@ body {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+@media screen and (min-width: 992px) {
+  .next {
+    right: 70px;
+  }
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -1782,6 +1830,10 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal__img {
+  width: 100%;
 }
 
 .loader {

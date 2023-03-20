@@ -1,3 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.blog__row {
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.blog__column {
+  @include mq(tablet) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 610px;
+    padding: 18px 20px 40px 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @include mq(desktop) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
 .row > .column {
   padding: 0 8px;
 }
@@ -8,21 +35,17 @@
   clear: both;
 }
 
-.blog__column {
-  margin-right: auto;
-  margin-left: auto;
-  width: 610px;
-  padding: 18px 20px 40px 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.column {
+  float: left;
+  width: 25%;
+  margin-right: 30px;
 }
 
 /* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -42,7 +65,6 @@
   max-width: 1200px;
 }
 
-/* The Close Button */
 .close {
   color: $greyColor;
   position: absolute;
@@ -50,6 +72,15 @@
   right: 25px;
   font-size: 100px;
   font-weight: bold;
+  @include mq(tablet) {
+    top: 68px;
+    right: 100px;
+  }
+
+  @include mq(desktop) {
+    top: 104px;
+    right: 84px;
+  }
 }
 
 .close:hover,
@@ -61,6 +92,10 @@
 
 .mySlides {
   display: none;
+  @include mq(tablet) {
+    margin-top: 100px;
+    width: 93%;
+  }
 }
 
 .cursor {
@@ -87,6 +122,9 @@
 
 /* Position the "next button" to the right */
 .next {
+  @include mq(tablet){
+    right: 70px;
+  }
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -132,4 +170,7 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal__img {
+  width: 100%;
 }
