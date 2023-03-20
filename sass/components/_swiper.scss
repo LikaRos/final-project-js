@@ -31,10 +31,6 @@
     border-radius: 50%;
     background-color: $whiteColor;
     box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
-    &:hover,
-    &:active {
-      background-color: $btnBgndColor;
-    }
   }
   &__span {
     position: absolute;
@@ -43,14 +39,24 @@
     color: $btnBgndColor;
     left: 26%;
     top: -11%;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $whiteColor;
-    }
   }
   &-pagination {
     top: 0;
+  }
+  &__link {
+    display: block;
+    width: 40px;
+    width: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover .swiper__span,
+    &:focus .swiper__span {
+      color: $whiteColor;
+    }
+    &:hover .swiper__btn-prev,
+    &:hover .swiper__btn-next,
+    &:focus .swiper__btn-prev,
+    &:focus .swiper__btn-next {
+      background-color: $btnBgndColor;
+    }
   }
 }

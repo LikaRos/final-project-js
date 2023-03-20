@@ -238,6 +238,7 @@ summary {
   display: list-item;
 }
 
+/*Loader*/
 ul {
   list-style: none;
 }
@@ -295,7 +296,7 @@ body {
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
   background-color: #ffffff;
 }
@@ -406,15 +407,12 @@ body {
     font-size: 16px;
   }
 }
-
-.progress-container {
+.header__progressContainer {
   width: 100%;
   height: 8px;
   background: #ccc;
 }
-
-/* The progress bar (scroll indicator) */
-.progress-bar {
+.header__progressBar {
   height: 8px;
   background: #37806B;
   width: 0%;
@@ -1429,9 +1427,6 @@ body {
   background-color: #ffffff;
   box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
 }
-.swiper__btn-next:hover, .swiper__btn-next:active, .swiper__btn-prev:hover, .swiper__btn-prev:active {
-  background-color: #37806B;
-}
 .swiper__span {
   position: absolute;
   font-size: 24px;
@@ -1440,11 +1435,20 @@ body {
   left: 26%;
   top: -11%;
 }
-.swiper__span:hover, .swiper__span:focus, .swiper__span:active {
-  color: #ffffff;
-}
 .swiper-pagination {
   top: 0;
+}
+.swiper__link {
+  display: block;
+  width: 40px;
+  width: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.swiper__link:hover .swiper__span, .swiper__link:focus .swiper__span {
+  color: #ffffff;
+}
+.swiper__link:hover .swiper__btn-prev, .swiper__link:hover .swiper__btn-next, .swiper__link:focus .swiper__btn-prev, .swiper__link:focus .swiper__btn-next {
+  background-color: #37806B;
 }
 
 @media screen and (min-width: 992px) {
@@ -1780,6 +1784,46 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.loader {
+  background-color: #ecf0f1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 100000;
+}
+.loader__element {
+  border-radius: 100%;
+  border: 5px solid #555;
+  margin: 10px;
+}
+.loader__element:nth-child(1) {
+  animation: preloader 0.6s ease-in-out alternate 10;
+}
+.loader__element:nth-child(2) {
+  animation: preloader 0.6s ease-in-out alternate 0.2s 10;
+}
+.loader__element:nth-child(3) {
+  animation: preloader 0.6s ease-in-out alternate 0.4s 10;
+}
+.loader__element:nth-child(4) {
+  animation: preloader 0.6s ease-in-out alternate 0.6s 10;
+}
+.loader__element:nth-child(5) {
+  animation: preloader 0.6s ease-in-out alternate 0.8s 10;
+}
+
+@keyframes preloader {
+  100% {
+    transform: scale(2);
+  }
+}
 @media screen and (min-width: 992px) {
   .equal-columns > * {
     flex: 1;

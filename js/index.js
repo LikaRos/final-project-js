@@ -3,7 +3,12 @@ const fetchDesignBtn = document.querySelector("#design");
 const fetchArchitectureBtn = document.querySelector("#architecture");
 const fetchPlanningBtn = document.querySelector("#planning");
 const postsList = document.querySelector(".features__divWrapper");
-const use = document.querySelector(".features__use")
+const use = document.querySelector(".features__use");
+
+setTimeout(() => {
+  const loader = document.getElementById("loader");
+  loader.remove();
+}, 4000);
 
 fetchPosts()
   .then((posts) => {
