@@ -11,6 +11,7 @@
     }
   }
   &__title {
+    text-align: center;
     @include mq(tablet) {
       width: 700px;
       margin-bottom: 90px;

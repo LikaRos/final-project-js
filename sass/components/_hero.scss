@@ -1,6 +1,6 @@
 .hero {
   &__container {
-    padding: 0 10px;
+    padding: 30px 10px;
 
     @include mq(tablet) {
       display: flex;
@@ -9,13 +9,12 @@
     }
 
     @include mq(desktop) {
-      padding: 0 50px 150px 50px;
+      padding: 100px 50px 150px 50px;
       display: flex;
       justify-content: space-between;
     }
   }
   &__text {
-    width: 450px;
     margin-bottom: 50px;
     text-align: center;
 
@@ -60,7 +59,6 @@
     }
   }
   &__btn {
-    font-size: 10px;
     line-height: 1.37;
     padding: 10px 30px 15px 30px;
     color: $whiteColor;
@@ -74,14 +72,7 @@
       background-color: $btnHoverColor;
       box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
     }
-    @include mq(tablet) {
-      font-size: 18px;
-      font-weight: 700;
-    }
-    @include mq(desktop) {
-      font-size: 18px;
-    }
-  }
+   }
   &__divDecor {
     position: relative;
     width: 430px;

@@ -81,10 +81,11 @@
       width: 167px;
     }
     @include mq(desktop) {
+      font-size: 18px;
+      width: 195px;
       &:not(:last-child) {
         margin-right: 78px;
       }
-      font-size: 18px;
     }
     &:hover,
     &:active {

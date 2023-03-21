@@ -1,44 +1,56 @@
 .equal-columns > * {
+  flex: 1;
   @include mq(tablet) {
     flex: 1;
   }
 }
 .footer {
-   position: relative;
+  position: relative;
   background-color: $greyBgnd;
   &::after {
-   content: "";
-   position: absolute;
-   display: block;
-   bottom: 54px;
-   left: 0;
-   width: 100%;
-   height: 2px;
-   border-radius: 1px;
-   background-color: $greyColor;
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 55px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $greyColor;
+    @include mq(tablet) {
+      bottom: 70px;
+    }
   }
   &__container {
-    padding-top: 94px;
+    padding: 35px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     @include mq(tablet) {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-bottom: 68px;
-      }
+      padding: 94px 50px;
     }
-    @include mq(desktop) {
+  }
+  &__logoWrapper {
+    margin-right: 20px;
+
+    @include mq(tablet) {
+      margin-right: 42px;
     }
-  
+  }
   &__logo {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
+    @include mq(tablet) {
+      margin-bottom: 12px;
+    }
   }
   &__image {
     @include mq(tablet) {
       width: 151px;
       height: 50px;
-    }
-    @include mq(desktop) {
     }
   }
 
@@ -46,27 +58,56 @@
   &__company,
   &__contact,
   &__socials {
-    padding-top: 7px;
-    min-width: 175px;
+    margin-right: 5px;
     color: $accentBlackColor;
+    @include mq(tablet) {
+      padding-top: 7px;
+      margin-right: 20px;
+    }
   }
-
+  &__socials h3 {
+    @include mq(mobile) {
+      margin-bottom: 10px;
+    }
+  }
   &__quickLinks h3,
   &__company h3,
   &__contact h3,
   &__socials h3 {
-    font-size: 24px;
+    font-size: 15px;
     font-family: $accentFont;
+    @include mq(tablet) {
+      font-size: 24px;
+    }
+  }
+  &__list {
+    margin-top: 10px;
   }
 
   &__list--grey a,
   &__text {
     color: $primaryGreyColor;
+    font-size: 10px;
+    @include mq(tablet) {
+      font-size: 18px;
+    }
   }
-  &__copyrightText{
-   color: $primaryGreyColor;
-   text-align: center;
-   margin-bottom: 19px;
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__copyrightText {
+    color: $primaryGreyColor;
+    text-align: center;
+    padding-bottom: 19px;
+    padding-top: 14px;
+    font-size: 10px;
+    @include mq(tablet) {
+      font-size: 18px;
+      padding-bottom: 26px;
+      padding-top: 14px;
+    }
   }
 }
 
@@ -77,9 +118,24 @@
 .svg__list {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 .svg__item {
+  @include mq(mobile) {
+    margin-bottom: 10px;
+  }
+  @include mq(tablet) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 .svg__link {
   display: flex;

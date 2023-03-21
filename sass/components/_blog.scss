@@ -1,13 +1,15 @@
 .blog {
-   background-color: $greyBgnd;
-   &__container{
-      @include mq(tablet) {
-         padding: 90px 70px 125px 70px;
-       }
-       @include mq(desktop) {
-      
-       }
-   }
+  background-color: $greyBgnd;
+  &__container {
+    padding: 50px 10px;
+  
+  @include mq(tablet) {
+    padding: 90px 70px 125px 70px;
+  }
+  @include mq(desktop) {
+  }
+}
+
   &__text {
     margin-bottom: 90px;
     font-family: $accentFont;
@@ -18,35 +20,58 @@
     text-align: center;
   }
   &__title {
-    margin-bottom: 90px;
     font-family: $accentFont;
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 0.6;
     text-align: center;
-  }
-  &__descriptionTitle {
-    width: 610px;
-  }
-  &__description {
-    width: 610px;
-    margin-bottom: 45px;
     @include mq(tablet) {
-      margin-bottom: 55px;
+      margin-bottom: 90px;
+      font-size: 48px;
     }
     @include mq(desktop) {
-      margin-bottom: 45px;
+      margin-bottom: 90px;
+      font-size: 48px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    @include mq(desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  &__column {
+    margin-top: 90px;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    @include mq(tablet) {
+      margin: 0 auto;
+      width: 610px;
+      padding: 18px 20px 40px 35px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    @include mq(desktop) {
+      margin-left: 0;
+      display: flex;
+      align-items: center;
     }
   }
   &__divDecor {
     position: relative;
-    width: 555px;
+    width: 490px;
     height: 390px;
     border: 2px solid $lineBrownColor;
-    border-radius: 124px 0;
-    margin-left: 25px;
-    margin-bottom: 60px;
-    margin-left: auto;
+    border-radius: 117px 0;
+    margin-bottom: 30px;
+    margin-left: 50px;
     margin-right: auto;
 
     @include mq(tablet) {
@@ -58,28 +83,51 @@
     }
     @include mq(desktop) {
       position: relative;
-      border-radius: 153px 0;
+      border-radius: 128px 0;
     }
   }
 
   &__image {
     position: absolute;
-    width: 554px;
+    width: 490px;
     height: 387px;
+    top: -18px;
+    right: 17px;
     @include mq(tablet) {
       position: absolute;
+      width: 554px;
+      height: 387px;
       top: -22px;
       right: 24px;
     }
     @include mq(desktop) {
       position: absolute;
-      transform: translate(-18px, -20px);
+      top: -27px;
+      right: 27px;
     }
   }
   &__descriptionTitle {
-    width: 610px;
+    width: 500px;
+    margin-left: 40px;
+    @include mq(tablet) {
+      width: 610px;
+      margin-bottom: 10px;
+    }
+  }
+  &__description {
+    width: 500px;
+    margin-left: 40px;
+    margin-bottom: 35px;
+    @include mq(tablet) {
+      width: 610px;
+      margin-bottom: 55px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 45px;
+    }
   }
   &__button {
+    margin: auto;
     line-height: 1.7;
     padding: 10px 30px 15px 30px;
     color: #fff;
@@ -94,6 +142,9 @@
     &:active {
       background-color: $btnHoverColor;
       box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
+    }
+    @include mq(desktop) {
+      margin-left: 0;
     }
   }
 }
