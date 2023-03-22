@@ -21,6 +21,7 @@
   &__element:nth-child(1) {
     animation: preloader 0.6s ease-in-out alternate 10;
   }
+
   &__element:nth-child(2) {
     animation: preloader 0.6s ease-in-out alternate 0.2s 10;
   }

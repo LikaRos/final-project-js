@@ -68,6 +68,7 @@
     height: 50px;
     margin-bottom: 30px;
   }
+
   &__nameInput,
   &__surnameInput,
   &__emailInput {
@@ -76,6 +77,7 @@
     border: none;
     border-radius: 24px 0;
   }
+
   &__emailInput {
     width: 500px;
     height: 50px;
@@ -86,11 +88,13 @@
       margin-bottom: 92px;
     }
   }
+
   &__nameInput {
     @include mq(tablet) {
       margin-right: 100px;
     }
   }
+
   &__nameInput::placeholder,
   &__surnameInput,
   &__emailInput {
@@ -100,11 +104,13 @@
     font-weight: 500;
     line-height: 1.6;
   }
+
   &__feedbackForm {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   &__button {
     line-height: 1.37;
     padding: 10px 35px 10px 48px;

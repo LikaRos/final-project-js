@@ -10,6 +10,7 @@
       padding: 90px 50px;
     }
   }
+
   &__title {
     text-align: center;
     @include mq(tablet) {
@@ -28,6 +29,7 @@
       margin-bottom: 90px;
     }
   }
+
   &__items {
     @include mq(tablet) {
       width: 768px;
@@ -69,6 +71,7 @@
       }
     }
   }
+
   &__unit {
     @include mq(tablet) {
       position: relative;
@@ -100,6 +103,7 @@
     margin-bottom: 10px;
     color: $accentBlackColor;
   }
+
   &__text {
     font-family: $primaryFont;
     font-weight: 700;
@@ -109,6 +113,7 @@
     margin-bottom: 10px;
     color: $primaryGreyColor;
   }
+
   &__lineDecor {
     @include mq(tablet) {
       position: absolute;
@@ -125,17 +130,6 @@
     @include mq(desktop) {
       transform: translate(160px, 82px);
     }
-
-    position: absolute;
-    z-index: 10;
-    width: 118px;
-    height: 50px;
-    border: 1px solid $lineGreyColor;
-    transform: translate(160px, 82px);
-    border-left: none;
-    border-right: 1px solid $lineGreyColor;
-    border-bottom: none;
-    border-top: 1px solid $lineGreyColor;
   }
   &__smallLine {
     @include mq(tablet) {
@@ -158,10 +152,12 @@
       border-top: none;
     }
   }
+
   &__lineDecor.counter__lineDecor--rightOriented {
     border-left: none;
     border-right: none;
   }
+
   &__smallLine.counter__smallLine--rightOriented {
     @include mq(tablet) {
       transform: translate(98%, -100%);

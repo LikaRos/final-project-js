@@ -12,6 +12,7 @@
   &__wrapper {
     position: relative;
   }
+
   &__text {
     font-family: $accentFont;
     font-size: 20px;
@@ -31,6 +32,7 @@
       margin-bottom: 10px;
     }
   }
+
   &__title {
     font-family: $accentFont;
     font-size: 48px;
@@ -38,7 +40,6 @@
     line-height: 1.18;
     font-weight: 500;
     text-align: center;
-
     @include mq(tablet) {
       font-size: 40px;
       margin-bottom: 30px;
@@ -52,6 +53,7 @@
       margin-bottom: 100px;
     }
   }
+
   &__btnWrapper {
     width: 120px;
     height: 35px;
@@ -99,6 +101,7 @@
       }
     }
   }
+
   &__subtitle {
     font-family: $primaryFont;
     font-size: 24px;
@@ -114,6 +117,7 @@
       margin-bottom: 10px;
     }
   }
+
   &__span {
     font-family: $primaryFont;
     font-size: 16px;
@@ -135,6 +139,7 @@
     @include mq(desktop) {
     }
   }
+
   &__img {
     border-radius: 35px 0;
     position: absolute;
@@ -162,6 +167,7 @@
       margin-left: 15%;
     }
   }
+
   &__quotation {
     position: absolute;
     width: 38px;

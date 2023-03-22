@@ -1,29 +1,26 @@
 .hero {
   &__container {
     padding: 30px 10px;
-
     @include mq(tablet) {
       display: flex;
       align-items: center;
       padding: 30px 140px 30px 70px;
     }
-
     @include mq(desktop) {
       padding: 100px 50px 150px 50px;
       display: flex;
       justify-content: space-between;
     }
   }
+
   &__text {
     margin-bottom: 50px;
     text-align: center;
-
     @include mq(tablet) {
       margin-right: 60px;
       width: 420px;
       text-align: left;
     }
-
     @include mq(desktop) {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -36,11 +33,11 @@
     font-size: 16px;
     color: $primaryGreyColor;
     margin-bottom: 14px;
-
     @include mq(desktop) {
       font-size: 20px;
     }
   }
+
   &__title {
     font-size: 40px;
     font-family: $accentFont;
@@ -51,6 +48,7 @@
       width: 575px;
     }
   }
+
   &__description {
     font-size: 14px;
     margin-bottom: 30px;
@@ -58,6 +56,7 @@
       font-size: 18px;
     }
   }
+
   &__btn {
     line-height: 1.37;
     padding: 10px 30px 15px 30px;
@@ -72,7 +71,8 @@
       background-color: $btnHoverColor;
       box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
     }
-   }
+  }
+
   &__divDecor {
     position: relative;
     width: 430px;
@@ -80,7 +80,6 @@
     border: 2px solid $lineBrownColor;
     border-radius: 124px 0;
     margin-left: 25px;
-
     @include mq(tablet) {
       border-radius: 90px 0;
       margin-left: 143px;
@@ -100,10 +99,9 @@
     position: absolute;
     border-radius: 110px 0;
     transform: translate(-18px, -20px);
-
     @include mq(tablet) {
       border-radius: 90px 0;
-       width: 405px;
+      width: 405px;
       height: 635px;
       top: 0;
       right: 0;

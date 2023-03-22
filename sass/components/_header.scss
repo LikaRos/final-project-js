@@ -12,7 +12,6 @@
     @include mq(mobile) {
       padding: 50px 5px 20px 5px;
     }
-
     @include mq(tablet) {
       display: flex;
       justify-content: space-between;
@@ -32,26 +31,29 @@
       width: 150px;
     }
   }
+
   &__wraperDiv {
     @include mq(tablet) {
       display: flex;
       flex-direction: row;
     }
   }
+
   &__navigation {
     display: none;
-
     @include mq(tablet) {
       display: flex;
       flex-direction: row;
     }
   }
+
   &__list {
     @include mq(tablet) {
       display: flex;
       flex-direction: row;
     }
   }
+
   &__item {
     @include mq(tablet) {
       &:not(:last-child) {
@@ -64,6 +66,7 @@
       }
     }
   }
+
   &__link {
     color: $primaryBlackColor;
     text-transform: uppercase;
@@ -87,6 +90,7 @@
       margin-left: 63px;
     }
   }
+
   &__authorizationLink {
     font-size: 10px;
     line-height: 1.37;
